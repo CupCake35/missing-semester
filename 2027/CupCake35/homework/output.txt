@@ -1,17 +1,17 @@
 === Current System Time ===
-2026-10-21 22:04:22 CST (+0800)
+2026-10-24 21:49:55 CST (+0800)
 
 === Last 10 Commands ===
-cp 2027/CupCake35/notes/lesson01-notes.md ~/我的笔记原稿.md
-cp ~/文档/deepseek-harness/default-workspace/2027/CupCake35/notes/lesson01-notes.md 2027/CupCake35/notes/
-bash 2027/CupCake35/homework/homework.sh
-cat 2027/CupCake35/homework/output.txt
-diff ~/我的笔记原稿.md 2027/CupCake35/notes/lesson01-notes.md
-mkdir -p ~/md-preview
-cp ~/文档/deepseek-harness/default-workspace/md2html.sh ~/md-preview/
-cp ~/文档/deepseek-harness/default-workspace/markdown-cheatsheet.md ~/md-preview/
-bash ~/md-preview/md2html.sh ~/missing-semester/2027/CupCake35/notes/lesson01-notes.md
-dsh web
+source /opt/ros/noetic/setup.bash
+rosrun turtlesim turtlesim_node
+source
+docker exec -it rm_ros bash
+docker stop rm_ros
+docker exec -it rm_ros bash
+docker exec -it rm_ros bash
+xhost +local:docker
+docker start rm_ros
+docker exec -it rm_ros bash
 
 === Notes Word Count ===
 Characters (wc -m): 6039

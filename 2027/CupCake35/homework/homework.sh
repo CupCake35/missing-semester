@@ -6,8 +6,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-# 自动查找 notes 目录下的第一个 .md 笔记文件，所以笔记改名也不用改脚本
-NOTES_FILE=$(ls -1 "$SCRIPT_DIR"/../notes/*.md 2>/dev/null | head -n 1 || true)
+# 固定统计第一课的笔记文件。
+# 注意：notes/ 里有多篇笔记时，"自动找第一个 .md" 会按文件名排序挑错文件，所以这里写死。
+NOTES_FILE="$SCRIPT_DIR/../notes/lesson01-notes.md"
 OUTPUT_FILE="$SCRIPT_DIR/output.txt"
 
 main() {
